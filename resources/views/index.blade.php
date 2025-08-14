@@ -1,335 +1,1150 @@
 
 <x-app-layout> 
-        <!--================Banner Area =================-->
-        <section class="banner_area">
-            <div class="booking_table d_flex align-items-center">
-            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
-				<div class="container">
-                    <div class="banner_content text-center">
-                        <h6>Welcome to Your Space</h6>
-                        <h2>Relax, Work, and Connect</h2>
-                        <p>From cozy lounges to inspiring workstations, we’ve got the perfect spot for you. Settle in, get comfortable, and make the space your own.</p>
-                    </div>
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="hero-wrapper">
+          <div class="row g-4">
+
+            <div class="col-lg-7">
+              <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
+                <div class="content-header">
+                  <span class="hero-label">
+                    <i class="bi bi-house-heart"></i>
+                    Dream Homes Await
+                  </span>
+                  <h1>Find Your Ideal Property with Expert Guidance</h1>
+                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Connect with verified real estate professionals.</p>
                 </div>
+
+                <div class="search-container" data-aos="fade-up" data-aos-delay="300">
+                  <div class="search-header">
+                    <h3>Start Your Property Search</h3>
+                    <p>Discover thousands of verified listings</p>
+                  </div>
+
+                  <form action="" class="property-search-form">
+                    <div class="search-grid">
+                      <div class="search-field">
+                        <label for="search-location" class="field-label">Location</label>
+                        <input type="text" id="search-location" name="location" placeholder="Enter city or neighborhood" required="">
+                        <i class="bi bi-geo-alt field-icon"></i>
+                      </div>
+
+                      <div class="search-field">
+                        <label for="search-type" class="field-label">Property Type</label>
+                        <select id="search-type" name="property_type" required="">
+                          <option value="">All Types</option>
+                          <option value="house">Single House</option>
+                          <option value="apartment">Apartment</option>
+                          <option value="condo">Condominium</option>
+                          <option value="villa">Villa</option>
+                          <option value="commercial">Commercial</option>
+                        </select>
+                        <i class="bi bi-building field-icon"></i>
+                      </div>
+
+                      <div class="search-field">
+                        <label for="search-budget" class="field-label">Budget Range</label>
+                        <select id="search-budget" name="price_range" required="">
+                          <option value="">Any Price</option>
+                          <option value="0-300000">Under $300K</option>
+                          <option value="300000-600000">$300K - $600K</option>
+                          <option value="600000-900000">$600K - $900K</option>
+                          <option value="900000-1500000">$900K - $1.5M</option>
+                          <option value="1500000+">Above $1.5M</option>
+                        </select>
+                        <i class="bi bi-currency-dollar field-icon"></i>
+                      </div>
+
+                      <div class="search-field">
+                        <label for="search-rooms" class="field-label">Bedrooms</label>
+                        <select id="search-rooms" name="bedrooms">
+                          <option value="">Any</option>
+                          <option value="1">1 Room</option>
+                          <option value="2">2 Rooms</option>
+                          <option value="3">3 Rooms</option>
+                          <option value="4">4 Rooms</option>
+                          <option value="5+">5+ Rooms</option>
+                        </select>
+                        <i class="bi bi-door-open field-icon"></i>
+                      </div>
+                    </div>
+
+                    <button type="submit" class="search-btn">
+                      <i class="bi bi-search"></i>
+                      <span>Find Properties</span>
+                    </button>
+                  </form>
+                </div>
+
+                <div class="achievement-grid" data-aos="fade-up" data-aos-delay="400">
+                  <div class="achievement-item">
+                    <div class="achievement-number">
+                      <span data-purecounter-start="0" data-purecounter-end="1250" data-purecounter-duration="1" class="purecounter"></span>+
+                    </div>
+                    <span class="achievement-text">Active Listings</span>
+                  </div>
+                  <div class="achievement-item">
+                    <div class="achievement-number">
+                      <span data-purecounter-start="0" data-purecounter-end="89" data-purecounter-duration="1" class="purecounter"></span>+
+                    </div>
+                    <span class="achievement-text">Expert Agents</span>
+                  </div>
+                  <div class="achievement-item">
+                    <div class="achievement-number">
+                      <span data-purecounter-start="0" data-purecounter-end="96" data-purecounter-duration="1" class="purecounter"></span>%
+                    </div>
+                    <span class="achievement-text">Success Rate</span>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Hero Content -->
+
+            <div class="col-lg-5">
+              <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
+                <div class="visual-container">
+                  <div class="featured-property">
+                    <img src="{{ asset('img/real-estate/property-exterior-8.webp') }}" alt="Featured Property" class="img-fluid">
+                    <div class="property-info">
+                      <div class="property-price">$925,000</div>
+                      <div class="property-details">
+                        <span><i class="bi bi-geo-alt"></i> Downtown District</span>
+                        <span><i class="bi bi-house"></i> 4 Bed, 3 Bath</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="overlay-images">
+                    <div class="overlay-img overlay-1">
+                      <img src="{{ asset('img/real-estate/property-interior-4.webp') }}" alt="Interior View" class="img-fluid">
+                    </div>
+                    <div class="overlay-img overlay-2">
+                      <img src="{{ asset('img/real-estate/property-exterior-2.webp') }}" alt="Exterior View" class="img-fluid">
+                    </div>
+                  </div>
+
+                  <div class="agent-card">
+                    <div class="agent-profile">
+                      <img src="{{ asset('img/real-estate/agent-7.webp') }}" alt="Agent Profile" class="agent-photo">
+                      <div class="agent-info">
+                        <h4>Michael Chen</h4>
+                        <p>Senior Property Advisor</p>
+                        <div class="agent-rating">
+                          <div class="stars">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                          </div>
+                          <span class="rating-text">5.0 (94 reviews)</span>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="contact-agent-btn">
+                      <i class="bi bi-chat-dots"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div><!-- End Hero Visual -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <!-- Home About Section -->
+    <section id="home-about" class="home-about section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class="image-gallery">
+              <div class="primary-image">
+                <img src="{{ asset('img/real-estate/property-exterior-1.webp') }}" alt="Modern Property" class="img-fluid">
+                <div class="experience-badge">
+                  <div class="badge-content">
+                    <div class="number"><span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>+</div>
+                    <div class="text">Years<br>Experience</div>
+                  </div>
+                </div>
+              </div>
+              <div class="secondary-image">
+                <img src="{{ asset('img/real-estate/property-interior-4.webp') }}" alt="Luxury Interior" class="img-fluid">
+              </div>
             </div>
-            <div class="hotel_booking_area position">
-                <div class="container">
-                    <div class="hotel_booking_table">
-                        <div class="col-md-3">
-                            <h2>Book<br> Your Room</h2>
-                        </div>
-                        <div class="col-md-9">
-                            <div class="boking_table">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="book_tabel_item">
-                                            <div class="form-group">
-                                                <div class='input-group date' id='datetimepicker11'>
-                                                    <input type='text' class="form-control" placeholder="Arrival Date"/>
-                                                    <span class="input-group-addon">
-                                                        <i class="fa fa-calendar" aria-hidden="true"></i>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <!--================location area =================-->
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="book_tabel_item">
-                                            <div class="input-group">
-                                                <select class="wide">
-                                                    <option data-display="Adult">Adult</option>
-                                                    <option value="1">Old</option>
-                                                    <option value="2">Younger</option>
-                                                    <option value="3">Potato</option>
-                                                </select>
-                                            </div>
-                                            <div class="input-group">
-                                                <select class="wide">
-                                                    <option data-display="Child">Child</option>
-                                                    <option value="1">Child</option>
-                                                    <option value="2">Baby</option>
-                                                    <option value="3">Child</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="book_tabel_item">
-                                            <div class="input-group">
-                                                <select class="wide">
-                                                    <option data-display="Child">Number of Rooms</option>
-                                                    <option value="1">Room 01</option>
-                                                    <option value="2">Room 02</option>
-                                                    <option value="3">Room 03</option>
-                                                </select>
-                                            </div>
-                                            <a class="book_now_btn button_hover" href="#">Book Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+            <div class="content">
+              <div class="section-header">
+                <span class="section-label">About Our Company</span>
+                <h2>Building Dreams, Creating Homes Since 2008</h2>
+              </div>
+
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+              <div class="achievements-list">
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <i class="bi bi-house-door"></i>
+                  </div>
+                  <div class="achievement-content">
+                    <h4><span data-purecounter-start="0" data-purecounter-end="3200" data-purecounter-duration="2" class="purecounter"></span>+ Properties Sold</h4>
+                    <p>Successfully completed transactions</p>
+                  </div>
                 </div>
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div class="achievement-content">
+                    <h4><span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter"></span>% Client Satisfaction</h4>
+                    <p>Happy customers recommend us</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="action-section">
+                <a href="about.html" class="btn-cta">
+                  <span>Discover Our Story</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+                <div class="contact-info">
+                  <div class="contact-icon">
+                    <i class="bi bi-telephone"></i>
+                  </div>
+                  <div class="contact-details">
+                    <span>Call us today</span>
+                    <strong>+1 (555) 123-4567</strong>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-        <!--================Banner Area =================-->
-        
-        <!--================ Accomodation Area  =================-->
-        <section class="accomodation_area section_gap">
-            <div class="container">
-                <div class="section_title text-center">
-                    <h2 class="title_color">Hotel Accomodation</h2>
-                    <p>We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Home About Section -->
+
+    <!-- Featured Properties Section -->
+    <section id="featured-properties" class="featured-properties section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Featured Properties</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-8">
+
+            <div class="featured-property-main" data-aos="zoom-in" data-aos-delay="200">
+              <div class="property-hero">
+                <img src="{{ asset('img/real-estate/property-exterior-4.webp') }}" alt="Luxury Estate" class="img-fluid">
+                <div class="property-overlay">
+                  <div class="property-badge-main premium">Premium</div>
+                  <div class="property-stats">
+                    <div class="stat-item">
+                      <i class="bi bi-house-door"></i>
+                      <span>6 Bedrooms</span>
+                    </div>
+                    <div class="stat-item">
+                      <i class="bi bi-droplet-fill"></i>
+                      <span>5 Bathrooms</span>
+                    </div>
+                    <div class="stat-item">
+                      <i class="bi bi-arrows-move"></i>
+                      <span>5,500 sq ft</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="row mb_30">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="accomodation_item text-center">
-                            <div class="hotel_img">
-                                <img src="image/room1.jpg" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
-                            </div>
-                            <a href="#"><h4 class="sec_h4">Double Deluxe Room</h4></a>
-                            <h5>$250<small>/night</small></h5>
-                        </div>
+              </div>
+              <div class="property-hero-content">
+                <div class="property-header">
+                  <div class="property-info">
+                    <h2><a href="property-details.html">Magnificent Estate with Garden Views</a></h2>
+                    <div class="property-address">
+                      <i class="bi bi-geo-alt-fill"></i>
+                      <span>Malibu, CA 90265</span>
                     </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="accomodation_item text-center">
-                            <div class="hotel_img">
-                                <img src="image/room2.jpg" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
-                            </div>
-                            <a href="#"><h4 class="sec_h4">Single Deluxe Room</h4></a>
-                            <h5>$200<small>/night</small></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="accomodation_item text-center">
-                            <div class="hotel_img">
-                                <img src="image/room3.jpg" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
-                            </div>
-                            <a href="#"><h4 class="sec_h4">Honeymoon Suit</h4></a>
-                            <h5>$750<small>/night</small></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="accomodation_item text-center">
-                            <div class="hotel_img">
-                                <img src="image/room4.jpg" alt="">
-                                <a href="#" class="btn theme_btn button_hover">Book Now</a>
-                            </div>
-                            <a href="#"><h4 class="sec_h4">Economy Double</h4></a>
-                            <h5>$200<small>/night</small></h5>
-                        </div>
-                    </div>
+                  </div>
+                  <div class="property-price-main">$4,850,000</div>
                 </div>
+                <p class="property-description">Luxurious estate nestled in exclusive Malibu hills featuring panoramic ocean views, infinity pool, wine cellar, and private tennis court. Architectural masterpiece with premium finishes throughout.</p>
+                <div class="property-actions-main">
+                  <a href="property-details.html" class="btn-primary-custom">Schedule Tour</a>
+                  <a href="property-details.html" class="btn-outline-custom">View Gallery</a>
+                  <div class="property-listing-info">
+                    <span class="listing-status for-sale">For Sale</span>
+                    <span class="listing-date">Listed today</span>
+                  </div>
+                </div>
+              </div>
             </div>
-        </section>
-        <!--================ Accomodation Area  =================-->
-        
-        <!--================ Facilities Area  =================-->
-        <section class="facilities_area section_gap">
-            <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
+
+          </div>
+
+          <div class="col-lg-4">
+
+            <div class="properties-sidebar">
+
+              <div class="sidebar-property-card" data-aos="fade-left" data-aos-delay="300">
+                <div class="sidebar-property-image">
+                  <img src="{{ asset('img/real-estate/property-exterior-1.webp') }}" alt="Modern Condo" class="img-fluid">
+                  <div class="sidebar-property-badge hot">Hot Deal</div>
+                </div>
+                <div class="sidebar-property-content">
+                  <h4><a href="property-details.html">Contemporary Downtown Condo</a></h4>
+                  <div class="sidebar-location">
+                    <i class="bi bi-pin-map"></i>
+                    <span>Seattle, WA 98101</span>
+                  </div>
+                  <div class="sidebar-specs">
+                    <span><i class="bi bi-house"></i> 3 BR</span>
+                    <span><i class="bi bi-droplet"></i> 2 BA</span>
+                    <span><i class="bi bi-rulers"></i> 2,100 sq ft</span>
+                  </div>
+                  <div class="sidebar-price-row">
+                    <div class="sidebar-price">$1,595,000</div>
+                    <a href="property-details.html" class="sidebar-btn">View</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="sidebar-property-card" data-aos="fade-left" data-aos-delay="400">
+                <div class="sidebar-property-image">
+                  <img src="{{ asset('img/real-estate/property-exterior-9.webp') }}" alt="Family Home" class="img-fluid">
+                  <div class="sidebar-property-badge new">New Listing</div>
+                </div>
+                <div class="sidebar-property-content">
+                  <h4><a href="property-details.html">Elegant Family Residence</a></h4>
+                  <div class="sidebar-location">
+                    <i class="bi bi-pin-map"></i>
+                    <span>Portland, OR 97201</span>
+                  </div>
+                  <div class="sidebar-specs">
+                    <span><i class="bi bi-house"></i> 4 BR</span>
+                    <span><i class="bi bi-droplet"></i> 3 BA</span>
+                    <span><i class="bi bi-rulers"></i> 3,100 sq ft</span>
+                  </div>
+                  <div class="sidebar-price-row">
+                    <div class="sidebar-price">$925,000</div>
+                    <a href="property-details.html" class="sidebar-btn">View</a>
+                  </div>
+                </div>
+              </div>
+
             </div>
-            <div class="container">
-                <div class="section_title text-center">
-                    <h2 class="title_w">Royal Facilities</h2>
-                    <p>Who are in extremely love with eco friendly system.</p>
+
+          </div>
+
+        </div>
+
+        <div class="row gy-4 mt-4">
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="property-card-horizontal">
+              <div class="property-image-horizontal">
+                <img src="{{ asset('img/real-estate/property-interior-5.webp') }}" alt="Penthouse" class="img-fluid">
+                <div class="property-badge-horizontal exclusive">Exclusive</div>
+              </div>
+              <div class="property-content-horizontal">
+                <h3><a href="property-details.html">Luxury Penthouse Suite</a></h3>
+                <div class="property-location-horizontal">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>Las Vegas, NV 89102</span>
                 </div>
-                <div class="row mb_30">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-dinner"></i>Restaurant</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-bicycle"></i>Sports CLub</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-shirt"></i>Swimming Pool</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-car"></i>Rent a Car</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-construction"></i>Gymnesium</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="facilities_item">
-                            <h4 class="sec_h4"><i class="lnr lnr-coffee-cup"></i>Bar</h4>
-                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
-                        </div>
-                    </div>
+                <div class="property-features">
+                  <span class="feature"><i class="bi bi-house"></i> 3 Bedrooms</span>
+                  <span class="feature"><i class="bi bi-droplet"></i> 3 Bathrooms</span>
+                  <span class="feature"><i class="bi bi-rulers"></i> 2,850 sq ft</span>
                 </div>
+                <p>Spectacular penthouse with floor-to-ceiling windows and private rooftop terrace overlooking the city skyline.</p>
+                <div class="property-footer-horizontal">
+                  <div class="property-price-horizontal">$2,195,000</div>
+                  <a href="property-details.html" class="btn-view-horizontal">View Details</a>
+                </div>
+              </div>
             </div>
-        </section>
-        <!--================ Facilities Area  =================-->
-        
-        <!--================ About History Area  =================-->
-        <section class="about_history_area section_gap">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 d_flex align-items-center">
-                        <div class="about_content ">
-                            <h2 class="title title_color">About Us <br>Our History<br>Mission & Vision</h2>
-                            <p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed.</p>
-                            <a href="#" class="button_hover theme_btn_two">Request Custom Price</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <img class="img-fluid" src="image/about_bg.jpg" alt="img">
-                    </div>
+          </div>
+
+          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="700">
+            <div class="property-card-horizontal">
+              <div class="property-image-horizontal">
+                <img src="{{ asset('img/real-estate/property-interior-8.webp') }}" alt="Modern Home" class="img-fluid">
+                <div class="property-badge-horizontal new">New</div>
+              </div>
+              <div class="property-content-horizontal">
+                <h3><a href="property-details.html">Modern Architectural Gem</a></h3>
+                <div class="property-location-horizontal">
+                  <i class="bi bi-geo-alt"></i>
+                  <span>Phoenix, AZ 85001</span>
                 </div>
+                <div class="property-features">
+                  <span class="feature"><i class="bi bi-house"></i> 4 Bedrooms</span>
+                  <span class="feature"><i class="bi bi-droplet"></i> 3 Bathrooms</span>
+                  <span class="feature"><i class="bi bi-rulers"></i> 3,450 sq ft</span>
+                </div>
+                <p>Award-winning contemporary design with sustainable features, smart home technology, and resort-style backyard.</p>
+                <div class="property-footer-horizontal">
+                  <div class="property-price-horizontal">$1,375,000</div>
+                  <a href="property-details.html" class="btn-view-horizontal">View Details</a>
+                </div>
+              </div>
             </div>
-        </section>
-        <!--================ About History Area  =================-->
-        
-        <!--================ Testimonial Area  =================-->
-        <section class="testimonial_area section_gap">
-            <div class="container">
-                <div class="section_title text-center">
-                    <h2 class="title_color">Testimonial from our Clients</h2>
-                    <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
-                </div>
-                <div class="testimonial_slider owl-carousel">
-                    <div class="media testimonial_item">
-                        <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                        <div class="media-body">
-                            <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                            <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
-                            <div class="star">
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star-half-o"></i></a>
-                            </div>
-                        </div>
-                    </div>    
-                    <div class="media testimonial_item">
-                        <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                        <div class="media-body">
-                            <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                            <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
-                            <div class="star">
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star-half-o"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="media testimonial_item">
-                        <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                        <div class="media-body">
-                            <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                            <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
-                            <div class="star">
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star-half-o"></i></a>
-                            </div>
-                        </div>
-                    </div>    
-                    <div class="media testimonial_item">
-                        <img class="rounded-circle" src="image/testtimonial-1.jpg" alt="">
-                        <div class="media-body">
-                            <p>As conscious traveling Paupers we must always be concerned about our dear Mother Earth. If you think about it, you travel across her face, and She is the </p>
-                            <a href="#"><h4 class="sec_h4">Fanny Spencer</h4></a>
-                            <div class="star">
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star"></i></a>
-                                <a href="#"><i class="fa fa-star-half-o"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Properties Section -->
+
+    <!-- Featured Services Section -->
+    <section id="featured-services" class="featured-services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Featured Services</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row g-4">
+
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-search"></i>
+              </div>
+              <div class="service-info">
+                <h3><a href="service-details.html">Property Search</a></h3>
+                <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <ul class="service-highlights">
+                  <li><i class="bi bi-check-circle-fill"></i> Comprehensive Listings</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Advanced Filtering</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Virtual Tours</li>
+                </ul>
+                <a href="service-details.html" class="service-link">
+                  <span>Explore Now</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+              <div class="service-visual">
+                <img src="{{ asset('img/real-estate/property-interior-2.webp') }}" class="img-fluid" alt="Property Search" loading="lazy">
+              </div>
             </div>
-        </section>
-        <!--================ Testimonial Area  =================-->
-        
-        <!--================ Latest Blog Area  =================-->
-        <section class="latest_blog_area section_gap">
-            <div class="container">
-                <div class="section_title text-center">
-                    <h2 class="title_color">latest posts from blog</h2>
-                    <p>The French Revolution constituted for the conscience of the dominant aristocratic class a fall from </p>
-                </div>
-                <div class="row mb_30">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-recent-blog-post">
-                            <div class="thumb">
-                                <img class="img-fluid" src="image/blog/blog-1.jpg" alt="post">
-                            </div>
-                            <div class="details">
-                                <div class="tags">
-                                    <a href="#" class="button_hover tag_btn">Travel</a>
-                                    <a href="#" class="button_hover tag_btn">Life Style</a>
-                                </div>
-                                <a href="#"><h4 class="sec_h4">Low Cost Advertising</h4></a>
-                                <p>Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A farmer.</p>
-                                <h6 class="date title_color">31st January,2018</h6>
-                            </div>	
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-recent-blog-post">
-                            <div class="thumb">
-                                <img class="img-fluid" src="image/blog/blog-2.jpg" alt="post">
-                            </div>
-                            <div class="details">
-                                <div class="tags">
-                                    <a href="#" class="button_hover tag_btn">Travel</a>
-                                    <a href="#" class="button_hover tag_btn">Life Style</a>
-                                </div>
-                                <a href="#"><h4 class="sec_h4">Creative Outdoor Ads</h4></a>
-                                <p>Self-doubt and fear interfere with our ability to achieve or set goals. Self-doubt and fear are</p>
-                                <h6 class="date title_color">31st January,2018</h6>
-                            </div>	
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="single-recent-blog-post">
-                            <div class="thumb">
-                                <img class="img-fluid" src="image/blog/blog-3.jpg" alt="post">
-                            </div>
-                            <div class="details">
-                                <div class="tags">
-                                    <a href="#" class="button_hover tag_btn">Travel</a>
-                                    <a href="#" class="button_hover tag_btn">Life Style</a>
-                                </div>
-                                <a href="#"><h4 class="sec_h4">It S Classified How To Utilize Free</h4></a>
-                                <p>Why do you want to motivate yourself? Actually, just answering that question fully can </p>
-                                <h6 class="date title_color">31st January,2018</h6>
-                            </div>	
-                        </div>
-                    </div>
-                </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-calculator"></i>
+              </div>
+              <div class="service-info">
+                <h3><a href="service-details.html">Property Valuation</a></h3>
+                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
+                <ul class="service-highlights">
+                  <li><i class="bi bi-check-circle-fill"></i> Market Analysis</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Comparative Reports</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Investment Insights</li>
+                </ul>
+                <a href="service-details.html" class="service-link">
+                  <span>Get Valuation</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+              <div class="service-visual">
+                <img src="{{ asset('img/real-estate/property-exterior-1.webp') }}" class="img-fluid" alt="Property Valuation" loading="lazy">
+              </div>
             </div>
-        </section>
-        <!--================ Recent Area  =================-->
+          </div><!-- End Service Item -->
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="400">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-key"></i>
+              </div>
+              <div class="service-info">
+                <h3><a href="service-details.html">Property Rental</a></h3>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                <ul class="service-highlights">
+                  <li><i class="bi bi-check-circle-fill"></i> Tenant Matching</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Lease Management</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Property Maintenance</li>
+                </ul>
+                <a href="service-details.html" class="service-link">
+                  <span>Start Renting</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+              <div class="service-visual">
+                <img src="{{ asset('img/real-estate/property-interior-8.webp') }}" class="img-fluid" alt="Property Rental" loading="lazy">
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="500">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="bi bi-shield-check"></i>
+              </div>
+              <div class="service-info">
+                <h3><a href="service-details.html">Investment Advisory</a></h3>
+                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos</p>
+                <ul class="service-highlights">
+                  <li><i class="bi bi-check-circle-fill"></i> Portfolio Planning</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Risk Assessment</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Market Forecasting</li>
+                </ul>
+                <a href="service-details.html" class="service-link">
+                  <span>Learn More</span>
+                  <i class="bi bi-arrow-up-right"></i>
+                </a>
+              </div>
+              <div class="service-visual">
+                <img src="{{ asset('img/real-estate/property-exterior-4.webp') }}" class="img-fluid" alt="Investment Advisory" loading="lazy">
+              </div>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+        <div class="text-center" data-aos="zoom-in" data-aos-delay="600">
+          <a href="services.html" class="btn-view-all">
+            <span>View All Services</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Services Section -->
+
+    <!-- Featured Agents Section -->
+    <section id="featured-agents" class="featured-agents section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Featured Agents</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="featured-agent">
+              <div class="agent-wrapper">
+                <div class="agent-photo">
+                  <img src="{{ asset('img/real-estate/agent-3.webp') }}" alt="Featured Agent" class="img-fluid">
+                  <div class="overlay-info">
+                    <div class="contact-actions">
+                      <a href="tel:+14155678901" class="contact-btn phone" title="Call Now">
+                        <i class="bi bi-telephone-fill"></i>
+                      </a>
+                      <a href="mailto:jennifer.adams@example.com" class="contact-btn email" title="Send Email">
+                        <i class="bi bi-envelope-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <span class="achievement-badge">Star Agent</span>
+                </div>
+                <div class="agent-details">
+                  <h4>Jennifer Adams</h4>
+                  <span class="position">Premium Property Consultant</span>
+                  <div class="location-info">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Beverly Hills</span>
+                  </div>
+                  <div class="expertise-tags">
+                    <span class="tag">Luxury Estates</span>
+                    <span class="tag">Celebrity Homes</span>
+                  </div>
+                  <a href="agent-profile.html" class="view-profile">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Featured Agent -->
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="featured-agent">
+              <div class="agent-wrapper">
+                <div class="agent-photo">
+                  <img src="{{ asset('img/real-estate/agent-7.webp') }}" alt="Featured Agent" class="img-fluid">
+                  <div class="overlay-info">
+                    <div class="contact-actions">
+                      <a href="tel:+14155678902" class="contact-btn phone" title="Call Now">
+                        <i class="bi bi-telephone-fill"></i>
+                      </a>
+                      <a href="mailto:marcus.hayes@example.com" class="contact-btn email" title="Send Email">
+                        <i class="bi bi-envelope-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <span class="achievement-badge expert">Expert</span>
+                </div>
+                <div class="agent-details">
+                  <h4>Marcus Hayes</h4>
+                  <span class="position">Commercial Real Estate Lead</span>
+                  <div class="location-info">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Manhattan</span>
+                  </div>
+                  <div class="expertise-tags">
+                    <span class="tag">Office Buildings</span>
+                    <span class="tag">Retail Spaces</span>
+                  </div>
+                  <a href="agent-profile.html" class="view-profile">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Featured Agent -->
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="featured-agent">
+              <div class="agent-wrapper">
+                <div class="agent-photo">
+                  <img src="{{ asset('img/real-estate/agent-5.webp') }}" alt="Featured Agent" class="img-fluid">
+                  <div class="overlay-info">
+                    <div class="contact-actions">
+                      <a href="tel:+14155678903" class="contact-btn phone" title="Call Now">
+                        <i class="bi bi-telephone-fill"></i>
+                      </a>
+                      <a href="mailto:sophia.rivera@example.com" class="contact-btn email" title="Send Email">
+                        <i class="bi bi-envelope-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <span class="achievement-badge rising">Rising Star</span>
+                </div>
+                <div class="agent-details">
+                  <h4>Sophia Rivera</h4>
+                  <span class="position">First-Time Buyer Specialist</span>
+                  <div class="location-info">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>San Francisco</span>
+                  </div>
+                  <div class="expertise-tags">
+                    <span class="tag">Condominiums</span>
+                    <span class="tag">Young Buyers</span>
+                  </div>
+                  <a href="agent-profile.html" class="view-profile">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Featured Agent -->
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="featured-agent">
+              <div class="agent-wrapper">
+                <div class="agent-photo">
+                  <img src="{{ asset('img/real-estate/agent-9.webp') }}" alt="Featured Agent" class="img-fluid">
+                  <div class="overlay-info">
+                    <div class="contact-actions">
+                      <a href="tel:+14155678904" class="contact-btn phone" title="Call Now">
+                        <i class="bi bi-telephone-fill"></i>
+                      </a>
+                      <a href="mailto:daniel.morrison@example.com" class="contact-btn email" title="Send Email">
+                        <i class="bi bi-envelope-fill"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <span class="achievement-badge veteran">Veteran</span>
+                </div>
+                <div class="agent-details">
+                  <h4>Daniel Morrison</h4>
+                  <span class="position">Investment Property Advisor</span>
+                  <div class="location-info">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span>Austin</span>
+                  </div>
+                  <div class="expertise-tags">
+                    <span class="tag">Multi-Family</span>
+                    <span class="tag">ROI Analysis</span>
+                  </div>
+                  <a href="agent-profile.html" class="view-profile">View Profile</a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Featured Agent -->
+
+        </div>
+
+        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="500">
+          <a href="agents.html" class="discover-all-agents">
+            <span>Discover All Agents</span>
+            <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+
+    </section><!-- /Featured Agents Section -->
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="testimonial-grid">
+
+          <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="100">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-image">
+                  <img src="{{ asset('img/person/person-f-5.webp') }}" class="img-fluid" alt="Testimonial 1">
+                </div>
+                <div class="testimonial-meta">
+                  <h3>Sophia Martinez</h3>
+                  <h4>Creative Director</h4>
+                  <div class="company-logo">
+                    <i class="bi bi-building"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <i class="bi bi-chat-quote-fill quote-icon"></i>
+                <p>Leveraging cutting-edge design principles to create immersive brand experiences that resonate with modern audiences.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item featured" data-aos="zoom-in" data-aos-delay="200">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-image">
+                  <img src="{{ asset('img/person/person-m-5.webp') }}" class="img-fluid" alt="Testimonial 2">
+                </div>
+                <div class="testimonial-meta">
+                  <h3>Alexander Wright</h3>
+                  <h4>CEO &amp; Founder</h4>
+                  <div class="company-logo">
+                    <i class="bi bi-buildings"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <i class="bi bi-chat-quote-fill quote-icon"></i>
+                <p>Revolutionary solutions have transformed our business landscape, driving unprecedented growth and market leadership position.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="300">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-image">
+                  <img src="{{ asset('img/person/person-f-6.webp') }}" class="img-fluid" alt="Testimonial 3">
+                </div>
+                <div class="testimonial-meta">
+                  <h3>Isabella Kim</h3>
+                  <h4>Product Strategist</h4>
+                  <div class="company-logo">
+                    <i class="bi bi-building-check"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <i class="bi bi-chat-quote-fill quote-icon"></i>
+                <p>Strategic implementation of innovative technologies has elevated our product development and market penetration.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item" data-aos="zoom-in" data-aos-delay="400">
+            <div class="testimonial-card">
+              <div class="testimonial-header">
+                <div class="testimonial-image">
+                  <img src="{{ asset('img/person/person-m-6.webp') }}" class="img-fluid" alt="Testimonial 4">
+                </div>
+                <div class="testimonial-meta">
+                  <h3>James Cooper</h3>
+                  <h4>Tech Lead</h4>
+                  <div class="company-logo">
+                    <i class="bi bi-building-gear"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="testimonial-body">
+                <i class="bi bi-chat-quote-fill quote-icon"></i>
+                <p>Exceptional technical expertise and innovative solutions have streamlined our development processes significantly.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+    <!-- Why Us Section -->
+    <section id="why-us" class="why-us section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Why Us</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="content">
+              <h3>Why Choose Premier Real Estate Partners?</h3>
+              <p>With over two decades of experience in the real estate market, we've built our reputation on trust, expertise, and exceptional results. Our dedicated team of local experts understands the nuances of every neighborhood and market trend.</p>
+
+              <div class="features-list">
+                <div class="feature-item d-flex align-items-center mb-3">
+                  <div class="icon-wrapper me-3">
+                    <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                  <div>
+                    <h5>Local Market Expertise</h5>
+                    <p>Deep knowledge of neighborhoods, pricing trends, and market conditions in your area.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item d-flex align-items-center mb-3">
+                  <div class="icon-wrapper me-3">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+                  <div>
+                    <h5>Verified Listings Only</h5>
+                    <p>Every property is thoroughly vetted and verified before listing to ensure accuracy and quality.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item d-flex align-items-center mb-3">
+                  <div class="icon-wrapper me-3">
+                    <i class="bi bi-headset"></i>
+                  </div>
+                  <div>
+                    <h5>24/7 Client Support</h5>
+                    <p>Our dedicated support team is available around the clock to assist with your real estate needs.</p>
+                  </div>
+                </div>
+
+                <div class="feature-item d-flex align-items-center mb-3">
+                  <div class="icon-wrapper me-3">
+                    <i class="bi bi-graph-up-arrow"></i>
+                  </div>
+                  <div>
+                    <h5>Proven Track Record</h5>
+                    <p>Consistently delivering results with over 2,500 successful transactions and 98% client satisfaction.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cta-buttons mt-4">
+                <a href="#" class="btn btn-primary me-3">Learn More About Us</a>
+                <a href="#" class="btn btn-outline-primary">Contact Our Team</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="stats-section">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <div class="stat-card text-center">
+                    <div class="stat-icon mb-3">
+                      <i class="bi bi-house-door"></i>
+                    </div>
+                    <div class="stat-number">
+                      <span data-purecounter-start="0" data-purecounter-end="2500" data-purecounter-duration="2" class="purecounter"></span>+
+                    </div>
+                    <div class="stat-label">Homes Sold</div>
+                    <p>Successfully closed transactions across all property types and price ranges.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="stat-card text-center">
+                    <div class="stat-icon mb-3">
+                      <i class="bi bi-people"></i>
+                    </div>
+                    <div class="stat-number">
+                      <span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2" class="purecounter"></span>%
+                    </div>
+                    <div class="stat-label">Client Satisfaction</div>
+                    <p>Exceptional service quality rated by our satisfied homeowners and investors.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="stat-card text-center">
+                    <div class="stat-icon mb-3">
+                      <i class="bi bi-clock-history"></i>
+                    </div>
+                    <div class="stat-number">
+                      <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="2" class="purecounter"></span>+
+                    </div>
+                    <div class="stat-label">Years Experience</div>
+                    <p>Two decades of expertise navigating changing market conditions successfully.</p>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="stat-card text-center">
+                    <div class="stat-icon mb-3">
+                      <i class="bi bi-award"></i>
+                    </div>
+                    <div class="stat-number">
+                      <span data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="2" class="purecounter"></span>+
+                    </div>
+                    <div class="stat-label">Industry Awards</div>
+                    <p>Recognition for excellence in real estate service and client satisfaction.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-preview mt-5">
+                <div class="testimonial-card">
+                  <div class="quote-icon mb-2">
+                    <i class="bi bi-quote"></i>
+                  </div>
+                  <p>"Working with this team made buying our first home a seamless experience. Their knowledge of the local market and dedication to finding the perfect property exceeded our expectations."</p>
+                  <div class="testimonial-author d-flex align-items-center mt-3">
+                    <img src="{{ asset('img/person/person-f-3.webp') }}" alt="Client" class="author-image me-3">
+                    <div>
+                      <h6>Sarah Martinez</h6>
+                      <span>First-time Homebuyer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+    <!-- Call To Action Section -->
+    <section class="call-to-action-1 call-to-action section" id="call-to-action">
+      <div class="cta-bg" style="background-image: url('{{ asset('img/real-estate/showcase-3.webp') }}');"></div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row justify-content-center">
+          <div class="col-xl-6 col-lg-8">
+
+            <div class="cta-content text-center">
+              <h2>Need Help Finding Your Dream Property?</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+
+              <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">Contact Us Today</a>
+                <a href="#" class="btn btn-outline">Schedule a Call</a>
+              </div>
+
+              <div class="cta-features">
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bi bi-telephone-fill"></i>
+                  <span>Free Consultation</span>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="250">
+                  <i class="bi bi-clock-fill"></i>
+                  <span>24/7 Support</span>
+                </div>
+                <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bi bi-shield-check-fill"></i>
+                  <span>Trusted Experts</span>
+                </div>
+              </div>
+
+            </div><!-- End CTA Content -->
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- /Call To Action Section -->
+
+    <!-- Recent Blog Posts Section -->
+    <section id="recent-blog-posts" class="recent-blog-posts section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Recent Blog Posts</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row">
+
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <article class="featured-post">
+              <div class="featured-img">
+                <img src="{{ asset('img/blog/blog-post-7.webp') }}" alt="" class="img-fluid" loading="lazy">
+                <div class="featured-badge">Featured</div>
+              </div>
+
+              <div class="featured-content">
+                <div class="post-header">
+                  <a href="#" class="category">Technology</a>
+                  <span class="post-date">Dec 18, 2024</span>
+                </div>
+
+                <h2 class="post-title">
+                  <a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit mauris</a>
+                </h2>
+
+                <p class="post-excerpt">
+                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
+                </p>
+
+                <div class="post-footer">
+                  <div class="author-info">
+                    <img src="{{ asset('img/person/person-m-8.webp') }}" alt="" class="author-avatar">
+                    <div class="author-details">
+                      <span class="author-name">Marcus Johnson</span>
+                      <span class="read-time">5 min read</span>
+                    </div>
+                  </div>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="featured-post" data-aos="fade-up" data-aos-delay="400">
+              <div class="featured-img">
+                <img src="{{ asset('img/blog/blog-post-3.webp') }}" alt="" class="img-fluid" loading="lazy">
+                <div class="featured-badge">Featured</div>
+              </div>
+
+              <div class="featured-content">
+                <div class="post-header">
+                  <a href="#" class="category">Innovation</a>
+                  <span class="post-date">Dec 16, 2024</span>
+                </div>
+
+                <h2 class="post-title">
+                  <a href="#">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse</a>
+                </h2>
+
+                <p class="post-excerpt">
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
+                </p>
+
+                <div class="post-footer">
+                  <div class="author-info">
+                    <img src="{{ asset('img/person/person-f-7.webp') }}" alt="" class="author-avatar">
+                    <div class="author-details">
+                      <span class="author-name">Emma Rodriguez</span>
+                      <span class="read-time">7 min read</span>
+                    </div>
+                  </div>
+                  <a href="#" class="read-more">Read More</a>
+                </div>
+              </div>
+            </article>
+          </div><!-- End featured post -->
+
+          <div class="col-lg-4">
+
+            <article class="recent-post" data-aos="fade-up" data-aos-delay="200">
+              <div class="recent-img">
+                <img src="{{ asset('img/blog/blog-post-5.webp') }}" alt="" class="img-fluid" loading="lazy">
+              </div>
+              <div class="recent-content">
+                <a href="#" class="category">Business</a>
+                <h3 class="recent-title">
+                  <a href="#">Excepteur sint occaecat cupidatat non proident sunt</a>
+                </h3>
+                <div class="recent-meta">
+                  <span class="author">By Jessica Kim</span>
+                  <span class="date">Dec 15, 2024</span>
+                </div>
+              </div>
+            </article><!-- End recent post -->
+
+            <article class="recent-post" data-aos="fade-up" data-aos-delay="250">
+              <div class="recent-img">
+                <img src="{{ asset('img/blog/blog-post-9.webp') }}" alt="" class="img-fluid" loading="lazy">
+              </div>
+              <div class="recent-content">
+                <a href="#" class="category">Marketing</a>
+                <h3 class="recent-title">
+                  <a href="#">Voluptate velit esse cillum dolore eu fugiat nulla</a>
+                </h3>
+                <div class="recent-meta">
+                  <span class="author">By David Park</span>
+                  <span class="date">Dec 12, 2024</span>
+                </div>
+              </div>
+            </article><!-- End recent post -->
+
+            <article class="recent-post" data-aos="fade-up" data-aos-delay="300">
+              <div class="recent-img">
+                <img src="{{ asset('img/blog/blog-post-6.webp') }}" alt="" class="img-fluid" loading="lazy">
+              </div>
+              <div class="recent-content">
+                <a href="#" class="category">Design</a>
+                <h3 class="recent-title">
+                  <a href="#">Pariatur consectetur adipiscing elit sed do eiusmod</a>
+                </h3>
+                <div class="recent-meta">
+                  <span class="author">By Sarah Miller</span>
+                  <span class="date">Dec 10, 2024</span>
+                </div>
+              </div>
+            </article><!-- End recent post -->
+
+            <article class="recent-post" data-aos="fade-up" data-aos-delay="350">
+              <div class="recent-img">
+                <img src="{{ asset('img/blog/blog-post-8.webp') }}" alt="" class="img-fluid" loading="lazy">
+              </div>
+              <div class="recent-content">
+                <a href="#" class="category">Tech</a>
+                <h3 class="recent-title">
+                  <a href="#">Magna aliquam erat volutpat consectetur adipiscing</a>
+                </h3>
+                <div class="recent-meta">
+                  <span class="author">By Alex Chen</span>
+                  <span class="date">Dec 8, 2024</span>
+                </div>
+              </div>
+            </article><!-- End recent post -->
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Recent Blog Posts Section -->
 </x-app-layout>
 
- 
