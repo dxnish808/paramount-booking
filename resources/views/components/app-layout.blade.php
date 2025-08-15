@@ -64,7 +64,6 @@
               <li><a href="{{ url('#') }}">Make a referral</a></li>
             </ul>
           </li>
-          <li><a href="{{ url('properties.html') }}">Team</a></li>
           <li><a href="{{ url('services.html') }}">Quick access</a></li>
           <li><a href="{{ url('agents.html') }}">Help</a></li>
         </ul>
@@ -80,31 +79,57 @@
     {{ $slot }}
   </main>
   <!--================ start footer Area  =================-->
-  <footer id="footer" class="footer accent-background">
+  <footer id="footer" class="footer accent-background py-5">
 
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-5 col-md-12 footer-about">
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
-          </div>
+  <div class="container">
+    <div class="row gy-4 align-items-center">
+
+      <!-- About & Social -->
+      <div class="col-lg-5 col-md-12 footer-about">
+        <h5 class="fw-bold text-white mb-3">Workspace Booking System</h5>
+        <p class="text-light small">
+          Book meeting rooms, desks, or lounge spaces with ease.  
+          Work smarter, connect better, and achieve more.
+        </p>
+        <div class="social-links d-flex gap-3 mt-3">
+          <a href="#" class="text-light fs-5"><i class="bi bi-twitter-x"></i></a>
+          <a href="#" class="text-light fs-5"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light fs-5"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light fs-5"><i class="bi bi-linkedin"></i></a>
         </div>
+      </div>
 
-        <div class="col-lg-2 col-6 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
-          </ul>
-        </div>
+      <!-- Useful Links -->
+      <div class="col-lg-2 col-6 footer-links">
+        <h6 class="fw-bold text-white">Useful Links</h6>
+        <ul class="list-unstyled small">
+          <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="#" class="text-light text-decoration-none">About Us</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Services</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Terms of Service</a></li>
+          <li><a href="#" class="text-light text-decoration-none">Privacy Policy</a></li>
+        </ul>
+      </div>
 
-  </footer>
+      <!-- Contact -->
+      <div class="col-lg-5 col-12">
+        <h6 class="fw-bold text-white">Contact</h6>
+        <p class="text-light small mb-1">123 Business Street, Kuala Lumpur, Malaysia</p>
+        <p class="text-light small mb-1">Email: info@workspace.com</p>
+        <p class="text-light small">Phone: +60 123 456 789</p>
+      </div>
+
+    </div>
+
+    <hr class="border-light my-4">
+
+    <div class="text-center text-light small">
+      &copy; 2025 Workspace Booking System. All Rights Reserved.
+    </div>
+  </div>
+
+</footer>
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

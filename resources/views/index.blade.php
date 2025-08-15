@@ -14,55 +14,83 @@
                     <h1>Work, Connect, Relax</h1>
                     <p>Reserve a meeting room, desk, or lounge space in just a few clicks. Stay productive with flexible booking options.</p>
                     </div>
-                <div class="search-container" data-aos="fade-up" data-aos-delay="300">
-                  <div class="search-header">
-                    <h3>Book Now</h3>
-                  </div>
+                <style>
+                  /* Only affect this page's search form */
+                  .property-search-form .search-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+                    gap: 15px;
+                  }
 
-                  <form action="" class="property-search-form">
-                    <div class="search-grid">
-                      <div class="search-field">
-                        <label for="search-location" class="field-label">Location</label>
-                        <input type="text" id="search-location" name="location" placeholder="Enter city or neighborhood" required="">
-                        <i class="bi bi-geo-alt field-icon"></i>
-                      </div>
+                  .property-search-form #search-location {
+                    width: 100%;
+                  }
 
-                      <div class="search-field">
-                        <label for="search-type" class="field-label">Workspaces</label>
-                        <select id="search-type" name="property_type" required="">
-                          <option value="">All Types</option>
-                          <option value="Desk">Desk</option>
-                          <option value="lounge">Lounge</option>
-                          <option value="meetingRoom">Meeting room</option>
-                        </select>
-                        <i class="bi bi-building field-icon"></i>
-                      </div>
+                  .property-search-form .search-field.location-field {
+                    grid-column: span 2; /* Location takes 2 blocks */
+                  }
 
-                      <div class="search-field">
-                        <label for="search-date" class="field-label">Date</label>
-                        <input type="date" id="search-date" name="date" required>
-                        <i class="bi bi-calendar field-icon"></i>
-                        </div>
+                  .property-search-form .time-row {
+                    display: flex;
+                    gap: 15px;
+                  }
 
-                        <div class="search-field">
-                        <label for="search-start" class="field-label">Start Time</label>
-                        <input type="time" id="search-start" name="start_time" required>
-                        <i class="bi bi-clock field-icon"></i>
-                        </div>
+                  .property-search-form .time-row .search-field {
+                    flex: 1;
+                  }
+                  </style>
 
-                        <div class="search-field">
-                        <label for="search-end" class="field-label">End Time</label>
-                        <input type="time" id="search-end" name="end_time" required>
-                        <i class="bi bi-clock-history field-icon"></i>
-                        </div>
+                  <div class="search-container" data-aos="fade-up" data-aos-delay="300">
+                    <div class="search-header">
+                      <h3>Book Now</h3>
                     </div>
 
-                    <button type="submit" class="search-btn">
-                      <i class="bi bi-search"></i>
-                      <span>Search</span>
-                    </button>
-                  </form>
-                </div>
+                    <form action="" class="property-search-form">
+                      <div class="search-grid">
+                        <div class="search-field location-field">
+                          <label for="search-location" class="field-label">Location</label>
+                          <input type="text" id="search-location" name="location" placeholder="Enter city or neighborhood" required>
+                          <i class="bi bi-geo-alt field-icon"></i>
+                        </div>
+
+                        <div class="search-field">
+                          <label for="search-type" class="field-label">Workspaces</label>
+                          <select id="search-type" name="property_type" required>
+                            <option value="">All Types</option>
+                            <option value="Desk">Desk</option>
+                            <option value="lounge">Lounge</option>
+                            <option value="meetingRoom">Meeting room</option>
+                          </select>
+                          <i class="bi bi-building field-icon"></i>
+                        </div>
+
+                        <div class="search-field">
+                          <label for="search-date" class="field-label">Date</label>
+                          <input type="date" id="search-date" name="date" required>
+                          <i class="bi bi-calendar field-icon"></i>
+                        </div>
+
+                        <div class="time-row" style="grid-column: span 2;">
+                          <div class="search-field">
+                            <label for="search-start" class="field-label">Start Time</label>
+                            <input type="time" id="search-start" name="start_time" required>
+                            <i class="bi bi-clock field-icon"></i>
+                          </div>
+
+                          <div class="search-field">
+                            <label for="search-end" class="field-label">End Time</label>
+                            <input type="time" id="search-end" name="end_time" required>
+                            <i class="bi bi-clock-history field-icon"></i>
+                          </div>
+                        </div>
+                      </div>
+
+                      <button type="submit" class="search-btn">
+                        <i class="bi bi-search"></i>
+                        <span>Search</span>
+                      </button>
+                    </form>
+                  </div>
               </div>
             </div><!-- End Hero Content -->
 
@@ -72,7 +100,9 @@
                   <div class="featured-property">
                     <img src="{{ asset('img/real-estate/property-exterior-8.webp') }}" alt="Featured Property" class="img-fluid">
                     <div class="property-info">
-                      
+                      <div class="property-details">
+                        <span><i class="bi bi-geo-alt"></i> Bachok Kelantan</span>
+                      </div>
                     </div>
                   </div>
 
@@ -95,131 +125,228 @@
 
     </section><!-- /Hero Section -->
 
-        <!-- Featured Services Section -->
-    <section id="featured-services" class="featured-services section">
+<section id="featured-services" class="featured-services section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Featured Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Dedicated Workspaces</h2>
+    <p>Book your ideal workspace by the week, month, or year — designed for productivity, comfort, and collaboration.</p>
+  </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row g-4">
+    <div class="row g-4">
 
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="bi bi-search"></i>
-              </div>
-              <div class="service-info">
-                <h3><a href="service-details.html">Property Search</a></h3>
-                <p>Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <ul class="service-highlights">
-                  <li><i class="bi bi-check-circle-fill"></i> Comprehensive Listings</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Advanced Filtering</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Virtual Tours</li>
-                </ul>
-                <a href="service-details.html" class="service-link">
-                  <span>Explore Now</span>
-                  <i class="bi bi-arrow-up-right"></i>
-                </a>
-              </div>
-              <div class="service-visual">
-                <img src="{{ asset('img/real-estate/property-interior-2.webp') }}" class="img-fluid" alt="Property Search" loading="lazy">
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="bi bi-calculator"></i>
-              </div>
-              <div class="service-info">
-                <h3><a href="service-details.html">Property Valuation</a></h3>
-                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam</p>
-                <ul class="service-highlights">
-                  <li><i class="bi bi-check-circle-fill"></i> Market Analysis</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Comparative Reports</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Investment Insights</li>
-                </ul>
-                <a href="service-details.html" class="service-link">
-                  <span>Get Valuation</span>
-                  <i class="bi bi-arrow-up-right"></i>
-                </a>
-              </div>
-              <div class="service-visual">
-                <img src="{{ asset('img/real-estate/property-exterior-1.webp') }}" class="img-fluid" alt="Property Valuation" loading="lazy">
-              </div>
-            </div>
-          </div><!-- End Service Item -->
-
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bi bi-laptop"></i>
+          </div>
+          <div class="service-info">
+            <h3><a href="#">Meeting Rooms</a></h3>
+            <p>Fully equipped spaces for team discussions, client meetings, and presentations.</p>
+            <ul class="service-highlights">
+              <li><i class="bi bi-check-circle-fill"></i> Whiteboard & Projector</li>
+              <li><i class="bi bi-check-circle-fill"></i> High-speed Wi-Fi</li>
+              <li><i class="bi bi-check-circle-fill"></i> Complimentary Coffee</li>
+            </ul>
+            <a href="#" class="service-link">
+              <span>Book Now</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+          <div class="service-visual">
+            <img src="{{ asset('img/workspace/meeting-room.webp') }}" class="img-fluid" alt="Meeting Room" loading="lazy">
+          </div>
         </div>
+      </div><!-- End Service Item -->
 
-        <div class="row g-4 mt-4">
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bi bi-person-workspace"></i>
+          </div>
+          <div class="service-info">
+            <h3><a href="#">Dedicated Desks</a></h3>
+            <p>Your own personal desk with all the amenities you need to work efficiently.</p>
+            <ul class="service-highlights">
+              <li><i class="bi bi-check-circle-fill"></i> 24/7 Access</li>
+              <li><i class="bi bi-check-circle-fill"></i> High-speed Wi-Fi</li>
+              <li><i class="bi bi-check-circle-fill"></i> Complimentary Coffee</li>
+            </ul>
+            <a href="#" class="service-link">
+              <span>Reserve Desk</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+          <div class="service-visual">
+            <img src="{{ asset('img/workspace/dedicated-desk.webp') }}" class="img-fluid" alt="Dedicated Desk" loading="lazy">
+          </div>
+        </div>
+      </div><!-- End Service Item -->
 
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="400">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="bi bi-key"></i>
+    </div>
+
+    <div class="row g-4 mt-4">
+
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="400">
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="bi bi-cup-hot"></i>
+          </div>
+          <div class="service-info">
+            <h3><a href="#">Lounge Spaces</a></h3>
+            <p>Relax, network, or brainstorm in our comfortable and stylish lounge areas.</p>
+            <ul class="service-highlights">
+              <li><i class="bi bi-check-circle-fill"></i> Complimentary Coffee & Tea</li>
+              <li><i class="bi bi-check-circle-fill"></i> Open Seating</li>
+              <li><i class="bi bi-check-circle-fill"></i> High-speed Wi-Fi</li>
+            </ul>
+            <a href="#" class="service-link">
+              <span>Join Now</span>
+              <i class="bi bi-arrow-up-right"></i>
+            </a>
+          </div>
+          <div class="service-visual">
+            <img src="{{ asset('img/workspace/lounge-space.webp') }}" class="img-fluid" alt="Lounge Space" loading="lazy">
+          </div>
+        </div>
+      </div><!-- End Service Item -->
+    </div>
+  </div>
+
+</section><!-- /Featured Services Section -->
+
+    <section id="why-us" class="why-us section">
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Why Us</h2>
+    <p>Your go-to platform for flexible workspaces, anytime, anywhere.</p>
+  </div><!-- End Section Title -->
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="row gy-4">
+
+      <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+        <div class="content">
+          <h3>Why Choose Our Workspace Booking Platform?</h3>
+          <p>We provide a seamless way to book meeting rooms, desks, or lounge spaces — whether you need them for a day, a week, a month, or a full year. With modern facilities and instant booking, you focus on your work, and we handle the rest.</p>
+
+          <div class="features-list">
+            <div class="feature-item d-flex align-items-center mb-3">
+              <div class="icon-wrapper me-3">
+                <i class="bi bi-wifi"></i>
               </div>
-              <div class="service-info">
-                <h3><a href="service-details.html">Property Rental</a></h3>
-                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
-                <ul class="service-highlights">
-                  <li><i class="bi bi-check-circle-fill"></i> Tenant Matching</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Lease Management</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Property Maintenance</li>
-                </ul>
-                <a href="service-details.html" class="service-link">
-                  <span>Start Renting</span>
-                  <i class="bi bi-arrow-up-right"></i>
-                </a>
-              </div>
-              <div class="service-visual">
-                <img src="{{ asset('img/real-estate/property-interior-8.webp') }}" class="img-fluid" alt="Property Rental" loading="lazy">
+              <div>
+                <h5>Free High-Speed Wi-Fi</h5>
+                <p>Stay connected and productive with fast, reliable internet in all spaces.</p>
               </div>
             </div>
-          </div><!-- End Service Item -->
 
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="500">
-            <div class="service-card">
-              <div class="service-icon">
-                <i class="bi bi-shield-check"></i>
+            <div class="feature-item d-flex align-items-center mb-3">
+              <div class="icon-wrapper me-3">
+                <i class="bi bi-cup-hot"></i>
               </div>
-              <div class="service-info">
-                <h3><a href="service-details.html">Investment Advisory</a></h3>
-                <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos</p>
-                <ul class="service-highlights">
-                  <li><i class="bi bi-check-circle-fill"></i> Portfolio Planning</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Risk Assessment</li>
-                  <li><i class="bi bi-check-circle-fill"></i> Market Forecasting</li>
-                </ul>
-                <a href="service-details.html" class="service-link">
-                  <span>Learn More</span>
-                  <i class="bi bi-arrow-up-right"></i>
-                </a>
-              </div>
-              <div class="service-visual">
-                <img src="{{ asset('img/real-estate/property-exterior-4.webp') }}" class="img-fluid" alt="Investment Advisory" loading="lazy">
+              <div>
+                <h5>Complimentary Coffee & Tea</h5>
+                <p>Enjoy unlimited coffee and tea to keep your day fueled and focused.</p>
               </div>
             </div>
-          </div><!-- End Service Item -->
 
+            <div class="feature-item d-flex align-items-center mb-3">
+              <div class="icon-wrapper me-3">
+                <i class="bi bi-easel"></i>
+              </div>
+              <div>
+                <h5>Whiteboards & Projectors</h5>
+                <p>Perfect for brainstorming sessions, presentations, and team meetings.</p>
+              </div>
+            </div>
+
+            <div class="feature-item d-flex align-items-center mb-3">
+              <div class="icon-wrapper me-3">
+                <i class="bi bi-calendar-check"></i>
+              </div>
+              <div>
+                <h5>Flexible Booking Options</h5>
+                <p>Reserve by the hour, day, week, or month to fit your unique schedule.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-buttons mt-4">
+            <a href="#" class="btn btn-primary me-3">View Available Spaces</a>
+            <a href="#" class="btn btn-outline-primary">Contact Support</a>
+          </div>
         </div>
-
-        <div class="text-center" data-aos="zoom-in" data-aos-delay="600">
-          <a href="services.html" class="btn-view-all">
-            <span>View All Services</span>
-            <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-
       </div>
 
-    </section><!-- /Featured Services Section -->
+      <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+        <div class="stats-section">
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <div class="stat-card text-center">
+                <div class="stat-icon mb-3">
+                  <i class="bi bi-door-open"></i>
+                </div>
+                <div class="stat-number">
+                  <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="2" class="purecounter"></span>+
+                </div>
+                <div class="stat-label">Available Workspaces</div>
+                <p>Meeting rooms, desks, and lounges ready for your booking.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="stat-card text-center">
+                <div class="stat-icon mb-3">
+                  <i class="bi bi-hand-thumbs-up"></i>
+                </div>
+                <div class="stat-number">
+                  <span data-purecounter-start="0" data-purecounter-end="97" data-purecounter-duration="2" class="purecounter"></span>%
+                </div>
+                <div class="stat-label">User Satisfaction</div>
+                <p>Rated highly by professionals, teams, and remote workers alike.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="stat-card text-center">
+                <div class="stat-icon mb-3">
+                  <i class="bi bi-clock-history"></i>
+                </div>
+                <div class="stat-number">
+                  <span data-purecounter-start="0" data-purecounter-end="24" data-purecounter-duration="2" class="purecounter"></span>/7
+                </div>
+                <div class="stat-label">Booking Access</div>
+                <p>Reserve spaces anytime with our online booking system.</p>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+              <div class="stat-card text-center">
+                <div class="stat-icon mb-3">
+                  <i class="bi bi-star-fill"></i>
+                </div>
+                <div class="stat-number">
+                  <span data-purecounter-start="0" data-purecounter-end="500" data-purecounter-duration="2" class="purecounter"></span>+
+                </div>
+                <div class="stat-label">Positive Reviews</div>
+                <p>Trusted by hundreds of happy members and repeat clients.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- /Why Us Section -->
+
+
 
     <!-- Home About Section -->
     <section id="home-about" class="home-about section">
@@ -402,346 +529,5 @@
 
     </section><!-- /Testimonials Section -->
 
-    <!-- Why Us Section -->
-    <section id="why-us" class="why-us section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Why Us</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
-            <div class="content">
-              <h3>Why Choose Premier Real Estate Partners?</h3>
-              <p>With over two decades of experience in the real estate market, we've built our reputation on trust, expertise, and exceptional results. Our dedicated team of local experts understands the nuances of every neighborhood and market trend.</p>
-
-              <div class="features-list">
-                <div class="feature-item d-flex align-items-center mb-3">
-                  <div class="icon-wrapper me-3">
-                    <i class="bi bi-check-circle-fill"></i>
-                  </div>
-                  <div>
-                    <h5>Local Market Expertise</h5>
-                    <p>Deep knowledge of neighborhoods, pricing trends, and market conditions in your area.</p>
-                  </div>
-                </div>
-
-                <div class="feature-item d-flex align-items-center mb-3">
-                  <div class="icon-wrapper me-3">
-                    <i class="bi bi-shield-check"></i>
-                  </div>
-                  <div>
-                    <h5>Verified Listings Only</h5>
-                    <p>Every property is thoroughly vetted and verified before listing to ensure accuracy and quality.</p>
-                  </div>
-                </div>
-
-                <div class="feature-item d-flex align-items-center mb-3">
-                  <div class="icon-wrapper me-3">
-                    <i class="bi bi-headset"></i>
-                  </div>
-                  <div>
-                    <h5>24/7 Client Support</h5>
-                    <p>Our dedicated support team is available around the clock to assist with your real estate needs.</p>
-                  </div>
-                </div>
-
-                <div class="feature-item d-flex align-items-center mb-3">
-                  <div class="icon-wrapper me-3">
-                    <i class="bi bi-graph-up-arrow"></i>
-                  </div>
-                  <div>
-                    <h5>Proven Track Record</h5>
-                    <p>Consistently delivering results with over 2,500 successful transactions and 98% client satisfaction.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="cta-buttons mt-4">
-                <a href="#" class="btn btn-primary me-3">Learn More About Us</a>
-                <a href="#" class="btn btn-outline-primary">Contact Our Team</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
-            <div class="stats-section">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <div class="stat-card text-center">
-                    <div class="stat-icon mb-3">
-                      <i class="bi bi-house-door"></i>
-                    </div>
-                    <div class="stat-number">
-                      <span data-purecounter-start="0" data-purecounter-end="2500" data-purecounter-duration="2" class="purecounter"></span>+
-                    </div>
-                    <div class="stat-label">Homes Sold</div>
-                    <p>Successfully closed transactions across all property types and price ranges.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="stat-card text-center">
-                    <div class="stat-icon mb-3">
-                      <i class="bi bi-people"></i>
-                    </div>
-                    <div class="stat-number">
-                      <span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="2" class="purecounter"></span>%
-                    </div>
-                    <div class="stat-label">Client Satisfaction</div>
-                    <p>Exceptional service quality rated by our satisfied homeowners and investors.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="stat-card text-center">
-                    <div class="stat-icon mb-3">
-                      <i class="bi bi-clock-history"></i>
-                    </div>
-                    <div class="stat-number">
-                      <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="2" class="purecounter"></span>+
-                    </div>
-                    <div class="stat-label">Years Experience</div>
-                    <p>Two decades of expertise navigating changing market conditions successfully.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <div class="stat-card text-center">
-                    <div class="stat-icon mb-3">
-                      <i class="bi bi-award"></i>
-                    </div>
-                    <div class="stat-number">
-                      <span data-purecounter-start="0" data-purecounter-end="45" data-purecounter-duration="2" class="purecounter"></span>+
-                    </div>
-                    <div class="stat-label">Industry Awards</div>
-                    <p>Recognition for excellence in real estate service and client satisfaction.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="testimonial-preview mt-5">
-                <div class="testimonial-card">
-                  <div class="quote-icon mb-2">
-                    <i class="bi bi-quote"></i>
-                  </div>
-                  <p>"Working with this team made buying our first home a seamless experience. Their knowledge of the local market and dedication to finding the perfect property exceeded our expectations."</p>
-                  <div class="testimonial-author d-flex align-items-center mt-3">
-                    <img src="{{ asset('img/person/person-f-3.webp') }}" alt="Client" class="author-image me-3">
-                    <div>
-                      <h6>Sarah Martinez</h6>
-                      <span>First-time Homebuyer</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Why Us Section -->
-
-    <!-- Call To Action Section -->
-    <section class="call-to-action-1 call-to-action section" id="call-to-action">
-      <div class="cta-bg" style="background-image: url('{{ asset('img/real-estate/showcase-3.webp') }}');"></div>
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row justify-content-center">
-          <div class="col-xl-6 col-lg-8">
-
-            <div class="cta-content text-center">
-              <h2>Need Help Finding Your Dream Property?</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-
-              <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">Contact Us Today</a>
-                <a href="#" class="btn btn-outline">Schedule a Call</a>
-              </div>
-
-              <div class="cta-features">
-                <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bi bi-telephone-fill"></i>
-                  <span>Free Consultation</span>
-                </div>
-                <div class="feature-item" data-aos="fade-up" data-aos-delay="250">
-                  <i class="bi bi-clock-fill"></i>
-                  <span>24/7 Support</span>
-                </div>
-                <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
-                  <i class="bi bi-shield-check-fill"></i>
-                  <span>Trusted Experts</span>
-                </div>
-              </div>
-
-            </div><!-- End CTA Content -->
-
-          </div>
-        </div>
-
-      </div>
-    </section><!-- /Call To Action Section -->
-
-    <!-- Recent Blog Posts Section -->
-    <section id="recent-blog-posts" class="recent-blog-posts section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Recent Blog Posts</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row">
-
-          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-            <article class="featured-post">
-              <div class="featured-img">
-                <img src="{{ asset('img/blog/blog-post-7.webp') }}" alt="" class="img-fluid" loading="lazy">
-                <div class="featured-badge">Featured</div>
-              </div>
-
-              <div class="featured-content">
-                <div class="post-header">
-                  <a href="#" class="category">Technology</a>
-                  <span class="post-date">Dec 18, 2024</span>
-                </div>
-
-                <h2 class="post-title">
-                  <a href="#">Lorem ipsum dolor sit amet consectetur adipiscing elit mauris</a>
-                </h2>
-
-                <p class="post-excerpt">
-                  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.
-                </p>
-
-                <div class="post-footer">
-                  <div class="author-info">
-                    <img src="{{ asset('img/person/person-m-8.webp') }}" alt="" class="author-avatar">
-                    <div class="author-details">
-                      <span class="author-name">Marcus Johnson</span>
-                      <span class="read-time">5 min read</span>
-                    </div>
-                  </div>
-                  <a href="#" class="read-more">Read More</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="featured-post" data-aos="fade-up" data-aos-delay="400">
-              <div class="featured-img">
-                <img src="{{ asset('img/blog/blog-post-3.webp') }}" alt="" class="img-fluid" loading="lazy">
-                <div class="featured-badge">Featured</div>
-              </div>
-
-              <div class="featured-content">
-                <div class="post-header">
-                  <a href="#" class="category">Innovation</a>
-                  <span class="post-date">Dec 16, 2024</span>
-                </div>
-
-                <h2 class="post-title">
-                  <a href="#">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse</a>
-                </h2>
-
-                <p class="post-excerpt">
-                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
-                </p>
-
-                <div class="post-footer">
-                  <div class="author-info">
-                    <img src="{{ asset('img/person/person-f-7.webp') }}" alt="" class="author-avatar">
-                    <div class="author-details">
-                      <span class="author-name">Emma Rodriguez</span>
-                      <span class="read-time">7 min read</span>
-                    </div>
-                  </div>
-                  <a href="#" class="read-more">Read More</a>
-                </div>
-              </div>
-            </article>
-          </div><!-- End featured post -->
-
-          <div class="col-lg-4">
-
-            <article class="recent-post" data-aos="fade-up" data-aos-delay="200">
-              <div class="recent-img">
-                <img src="{{ asset('img/blog/blog-post-5.webp') }}" alt="" class="img-fluid" loading="lazy">
-              </div>
-              <div class="recent-content">
-                <a href="#" class="category">Business</a>
-                <h3 class="recent-title">
-                  <a href="#">Excepteur sint occaecat cupidatat non proident sunt</a>
-                </h3>
-                <div class="recent-meta">
-                  <span class="author">By Jessica Kim</span>
-                  <span class="date">Dec 15, 2024</span>
-                </div>
-              </div>
-            </article><!-- End recent post -->
-
-            <article class="recent-post" data-aos="fade-up" data-aos-delay="250">
-              <div class="recent-img">
-                <img src="{{ asset('img/blog/blog-post-9.webp') }}" alt="" class="img-fluid" loading="lazy">
-              </div>
-              <div class="recent-content">
-                <a href="#" class="category">Marketing</a>
-                <h3 class="recent-title">
-                  <a href="#">Voluptate velit esse cillum dolore eu fugiat nulla</a>
-                </h3>
-                <div class="recent-meta">
-                  <span class="author">By David Park</span>
-                  <span class="date">Dec 12, 2024</span>
-                </div>
-              </div>
-            </article><!-- End recent post -->
-
-            <article class="recent-post" data-aos="fade-up" data-aos-delay="300">
-              <div class="recent-img">
-                <img src="{{ asset('img/blog/blog-post-6.webp') }}" alt="" class="img-fluid" loading="lazy">
-              </div>
-              <div class="recent-content">
-                <a href="#" class="category">Design</a>
-                <h3 class="recent-title">
-                  <a href="#">Pariatur consectetur adipiscing elit sed do eiusmod</a>
-                </h3>
-                <div class="recent-meta">
-                  <span class="author">By Sarah Miller</span>
-                  <span class="date">Dec 10, 2024</span>
-                </div>
-              </div>
-            </article><!-- End recent post -->
-
-            <article class="recent-post" data-aos="fade-up" data-aos-delay="350">
-              <div class="recent-img">
-                <img src="{{ asset('img/blog/blog-post-8.webp') }}" alt="" class="img-fluid" loading="lazy">
-              </div>
-              <div class="recent-content">
-                <a href="#" class="category">Tech</a>
-                <h3 class="recent-title">
-                  <a href="#">Magna aliquam erat volutpat consectetur adipiscing</a>
-                </h3>
-                <div class="recent-meta">
-                  <span class="author">By Alex Chen</span>
-                  <span class="date">Dec 8, 2024</span>
-                </div>
-              </div>
-            </article><!-- End recent post -->
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Recent Blog Posts Section -->
 </x-app-layout>
 
