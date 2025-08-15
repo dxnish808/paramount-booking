@@ -11,18 +11,12 @@
             <div class="col-lg-7">
               <div class="hero-content" data-aos="zoom-in" data-aos-delay="200">
                 <div class="content-header">
-                  <span class="hero-label">
-                    <i class="bi bi-house-heart"></i>
-                    Dream Homes Await
-                  </span>
-                  <h1>Find Your Ideal Property with Expert Guidance</h1>
-                  <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Connect with verified real estate professionals.</p>
-                </div>
-
+                    <h1>Work, Connect, Relax</h1>
+                    <p>Reserve a meeting room, desk, or lounge space in just a few clicks. Stay productive with flexible booking options.</p>
+                    </div>
                 <div class="search-container" data-aos="fade-up" data-aos-delay="300">
                   <div class="search-header">
-                    <h3>Start Your Property Search</h3>
-                    <p>Discover thousands of verified listings</p>
+                    <h3>Book Now</h3>
                   </div>
 
                   <form action="" class="property-search-form">
@@ -34,71 +28,40 @@
                       </div>
 
                       <div class="search-field">
-                        <label for="search-type" class="field-label">Property Type</label>
+                        <label for="search-type" class="field-label">Workspaces</label>
                         <select id="search-type" name="property_type" required="">
                           <option value="">All Types</option>
-                          <option value="house">Single House</option>
-                          <option value="apartment">Apartment</option>
-                          <option value="condo">Condominium</option>
-                          <option value="villa">Villa</option>
-                          <option value="commercial">Commercial</option>
+                          <option value="Desk">Desk</option>
+                          <option value="lounge">Lounge</option>
+                          <option value="meetingRoom">Meeting room</option>
                         </select>
                         <i class="bi bi-building field-icon"></i>
                       </div>
 
                       <div class="search-field">
-                        <label for="search-budget" class="field-label">Budget Range</label>
-                        <select id="search-budget" name="price_range" required="">
-                          <option value="">Any Price</option>
-                          <option value="0-300000">Under $300K</option>
-                          <option value="300000-600000">$300K - $600K</option>
-                          <option value="600000-900000">$600K - $900K</option>
-                          <option value="900000-1500000">$900K - $1.5M</option>
-                          <option value="1500000+">Above $1.5M</option>
-                        </select>
-                        <i class="bi bi-currency-dollar field-icon"></i>
-                      </div>
+                        <label for="search-date" class="field-label">Date</label>
+                        <input type="date" id="search-date" name="date" required>
+                        <i class="bi bi-calendar field-icon"></i>
+                        </div>
 
-                      <div class="search-field">
-                        <label for="search-rooms" class="field-label">Bedrooms</label>
-                        <select id="search-rooms" name="bedrooms">
-                          <option value="">Any</option>
-                          <option value="1">1 Room</option>
-                          <option value="2">2 Rooms</option>
-                          <option value="3">3 Rooms</option>
-                          <option value="4">4 Rooms</option>
-                          <option value="5+">5+ Rooms</option>
-                        </select>
-                        <i class="bi bi-door-open field-icon"></i>
-                      </div>
+                        <div class="search-field">
+                        <label for="search-start" class="field-label">Start Time</label>
+                        <input type="time" id="search-start" name="start_time" required>
+                        <i class="bi bi-clock field-icon"></i>
+                        </div>
+
+                        <div class="search-field">
+                        <label for="search-end" class="field-label">End Time</label>
+                        <input type="time" id="search-end" name="end_time" required>
+                        <i class="bi bi-clock-history field-icon"></i>
+                        </div>
                     </div>
 
                     <button type="submit" class="search-btn">
                       <i class="bi bi-search"></i>
-                      <span>Find Properties</span>
+                      <span>Search</span>
                     </button>
                   </form>
-                </div>
-
-                <div class="achievement-grid" data-aos="fade-up" data-aos-delay="400">
-                  <div class="achievement-item">
-                    <div class="achievement-number">
-                      <span data-purecounter-start="0" data-purecounter-end="1250" data-purecounter-duration="1" class="purecounter"></span>+
-                    </div>
-                    <span class="achievement-text">Active Listings</span>
-                  </div>
-                  <div class="achievement-item">
-                    <div class="achievement-number">
-                      <span data-purecounter-start="0" data-purecounter-end="89" data-purecounter-duration="1" class="purecounter"></span>+
-                    </div>
-                    <span class="achievement-text">Expert Agents</span>
-                  </div>
-                  <div class="achievement-item">
-                    <div class="achievement-number">
-                      <span data-purecounter-start="0" data-purecounter-end="96" data-purecounter-duration="1" class="purecounter"></span>%
-                    </div>
-                    <span class="achievement-text">Success Rate</span>
-                  </div>
                 </div>
               </div>
             </div><!-- End Hero Content -->
@@ -109,11 +72,7 @@
                   <div class="featured-property">
                     <img src="{{ asset('img/real-estate/property-exterior-8.webp') }}" alt="Featured Property" class="img-fluid">
                     <div class="property-info">
-                      <div class="property-price">$925,000</div>
-                      <div class="property-details">
-                        <span><i class="bi bi-geo-alt"></i> Downtown District</span>
-                        <span><i class="bi bi-house"></i> 4 Bed, 3 Bath</span>
-                      </div>
+                      
                     </div>
                   </div>
 
@@ -124,29 +83,6 @@
                     <div class="overlay-img overlay-2">
                       <img src="{{ asset('img/real-estate/property-exterior-2.webp') }}" alt="Exterior View" class="img-fluid">
                     </div>
-                  </div>
-
-                  <div class="agent-card">
-                    <div class="agent-profile">
-                      <img src="{{ asset('img/real-estate/agent-7.webp') }}" alt="Agent Profile" class="agent-photo">
-                      <div class="agent-info">
-                        <h4>Michael Chen</h4>
-                        <p>Senior Property Advisor</p>
-                        <div class="agent-rating">
-                          <div class="stars">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                          </div>
-                          <span class="rating-text">5.0 (94 reviews)</span>
-                        </div>
-                      </div>
-                    </div>
-                    <button class="contact-agent-btn">
-                      <i class="bi bi-chat-dots"></i>
-                    </button>
                   </div>
                 </div>
               </div>
@@ -159,262 +95,7 @@
 
     </section><!-- /Hero Section -->
 
-    <!-- Home About Section -->
-    <section id="home-about" class="home-about section">
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
-
-          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
-            <div class="image-gallery">
-              <div class="primary-image">
-                <img src="{{ asset('img/real-estate/property-exterior-1.webp') }}" alt="Modern Property" class="img-fluid">
-                <div class="experience-badge">
-                  <div class="badge-content">
-                    <div class="number"><span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>+</div>
-                    <div class="text">Years<br>Experience</div>
-                  </div>
-                </div>
-              </div>
-              <div class="secondary-image">
-                <img src="{{ asset('img/real-estate/property-interior-4.webp') }}" alt="Luxury Interior" class="img-fluid">
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
-            <div class="content">
-              <div class="section-header">
-                <span class="section-label">About Our Company</span>
-                <h2>Building Dreams, Creating Homes Since 2008</h2>
-              </div>
-
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-
-              <div class="achievements-list">
-                <div class="achievement-item">
-                  <div class="achievement-icon">
-                    <i class="bi bi-house-door"></i>
-                  </div>
-                  <div class="achievement-content">
-                    <h4><span data-purecounter-start="0" data-purecounter-end="3200" data-purecounter-duration="2" class="purecounter"></span>+ Properties Sold</h4>
-                    <p>Successfully completed transactions</p>
-                  </div>
-                </div>
-                <div class="achievement-item">
-                  <div class="achievement-icon">
-                    <i class="bi bi-people"></i>
-                  </div>
-                  <div class="achievement-content">
-                    <h4><span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter"></span>% Client Satisfaction</h4>
-                    <p>Happy customers recommend us</p>
-                  </div>
-                </div>
-              </div>
-
-              <div class="action-section">
-                <a href="about.html" class="btn-cta">
-                  <span>Discover Our Story</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-                <div class="contact-info">
-                  <div class="contact-icon">
-                    <i class="bi bi-telephone"></i>
-                  </div>
-                  <div class="contact-details">
-                    <span>Call us today</span>
-                    <strong>+1 (555) 123-4567</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Home About Section -->
-
-    <!-- Featured Properties Section -->
-    <section id="featured-properties" class="featured-properties section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Featured Properties</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-5">
-
-          <div class="col-lg-8">
-
-            <div class="featured-property-main" data-aos="zoom-in" data-aos-delay="200">
-              <div class="property-hero">
-                <img src="{{ asset('img/real-estate/property-exterior-4.webp') }}" alt="Luxury Estate" class="img-fluid">
-                <div class="property-overlay">
-                  <div class="property-badge-main premium">Premium</div>
-                  <div class="property-stats">
-                    <div class="stat-item">
-                      <i class="bi bi-house-door"></i>
-                      <span>6 Bedrooms</span>
-                    </div>
-                    <div class="stat-item">
-                      <i class="bi bi-droplet-fill"></i>
-                      <span>5 Bathrooms</span>
-                    </div>
-                    <div class="stat-item">
-                      <i class="bi bi-arrows-move"></i>
-                      <span>5,500 sq ft</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="property-hero-content">
-                <div class="property-header">
-                  <div class="property-info">
-                    <h2><a href="property-details.html">Magnificent Estate with Garden Views</a></h2>
-                    <div class="property-address">
-                      <i class="bi bi-geo-alt-fill"></i>
-                      <span>Malibu, CA 90265</span>
-                    </div>
-                  </div>
-                  <div class="property-price-main">$4,850,000</div>
-                </div>
-                <p class="property-description">Luxurious estate nestled in exclusive Malibu hills featuring panoramic ocean views, infinity pool, wine cellar, and private tennis court. Architectural masterpiece with premium finishes throughout.</p>
-                <div class="property-actions-main">
-                  <a href="property-details.html" class="btn-primary-custom">Schedule Tour</a>
-                  <a href="property-details.html" class="btn-outline-custom">View Gallery</a>
-                  <div class="property-listing-info">
-                    <span class="listing-status for-sale">For Sale</span>
-                    <span class="listing-date">Listed today</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="col-lg-4">
-
-            <div class="properties-sidebar">
-
-              <div class="sidebar-property-card" data-aos="fade-left" data-aos-delay="300">
-                <div class="sidebar-property-image">
-                  <img src="{{ asset('img/real-estate/property-exterior-1.webp') }}" alt="Modern Condo" class="img-fluid">
-                  <div class="sidebar-property-badge hot">Hot Deal</div>
-                </div>
-                <div class="sidebar-property-content">
-                  <h4><a href="property-details.html">Contemporary Downtown Condo</a></h4>
-                  <div class="sidebar-location">
-                    <i class="bi bi-pin-map"></i>
-                    <span>Seattle, WA 98101</span>
-                  </div>
-                  <div class="sidebar-specs">
-                    <span><i class="bi bi-house"></i> 3 BR</span>
-                    <span><i class="bi bi-droplet"></i> 2 BA</span>
-                    <span><i class="bi bi-rulers"></i> 2,100 sq ft</span>
-                  </div>
-                  <div class="sidebar-price-row">
-                    <div class="sidebar-price">$1,595,000</div>
-                    <a href="property-details.html" class="sidebar-btn">View</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="sidebar-property-card" data-aos="fade-left" data-aos-delay="400">
-                <div class="sidebar-property-image">
-                  <img src="{{ asset('img/real-estate/property-exterior-9.webp') }}" alt="Family Home" class="img-fluid">
-                  <div class="sidebar-property-badge new">New Listing</div>
-                </div>
-                <div class="sidebar-property-content">
-                  <h4><a href="property-details.html">Elegant Family Residence</a></h4>
-                  <div class="sidebar-location">
-                    <i class="bi bi-pin-map"></i>
-                    <span>Portland, OR 97201</span>
-                  </div>
-                  <div class="sidebar-specs">
-                    <span><i class="bi bi-house"></i> 4 BR</span>
-                    <span><i class="bi bi-droplet"></i> 3 BA</span>
-                    <span><i class="bi bi-rulers"></i> 3,100 sq ft</span>
-                  </div>
-                  <div class="sidebar-price-row">
-                    <div class="sidebar-price">$925,000</div>
-                    <a href="property-details.html" class="sidebar-btn">View</a>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-        <div class="row gy-4 mt-4">
-
-          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="property-card-horizontal">
-              <div class="property-image-horizontal">
-                <img src="{{ asset('img/real-estate/property-interior-5.webp') }}" alt="Penthouse" class="img-fluid">
-                <div class="property-badge-horizontal exclusive">Exclusive</div>
-              </div>
-              <div class="property-content-horizontal">
-                <h3><a href="property-details.html">Luxury Penthouse Suite</a></h3>
-                <div class="property-location-horizontal">
-                  <i class="bi bi-geo-alt"></i>
-                  <span>Las Vegas, NV 89102</span>
-                </div>
-                <div class="property-features">
-                  <span class="feature"><i class="bi bi-house"></i> 3 Bedrooms</span>
-                  <span class="feature"><i class="bi bi-droplet"></i> 3 Bathrooms</span>
-                  <span class="feature"><i class="bi bi-rulers"></i> 2,850 sq ft</span>
-                </div>
-                <p>Spectacular penthouse with floor-to-ceiling windows and private rooftop terrace overlooking the city skyline.</p>
-                <div class="property-footer-horizontal">
-                  <div class="property-price-horizontal">$2,195,000</div>
-                  <a href="property-details.html" class="btn-view-horizontal">View Details</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-xl-6" data-aos="fade-up" data-aos-delay="700">
-            <div class="property-card-horizontal">
-              <div class="property-image-horizontal">
-                <img src="{{ asset('img/real-estate/property-interior-8.webp') }}" alt="Modern Home" class="img-fluid">
-                <div class="property-badge-horizontal new">New</div>
-              </div>
-              <div class="property-content-horizontal">
-                <h3><a href="property-details.html">Modern Architectural Gem</a></h3>
-                <div class="property-location-horizontal">
-                  <i class="bi bi-geo-alt"></i>
-                  <span>Phoenix, AZ 85001</span>
-                </div>
-                <div class="property-features">
-                  <span class="feature"><i class="bi bi-house"></i> 4 Bedrooms</span>
-                  <span class="feature"><i class="bi bi-droplet"></i> 3 Bathrooms</span>
-                  <span class="feature"><i class="bi bi-rulers"></i> 3,450 sq ft</span>
-                </div>
-                <p>Award-winning contemporary design with sustainable features, smart home technology, and resort-style backyard.</p>
-                <div class="property-footer-horizontal">
-                  <div class="property-price-horizontal">$1,375,000</div>
-                  <a href="property-details.html" class="btn-view-horizontal">View Details</a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </section><!-- /Featured Properties Section -->
-
-    <!-- Featured Services Section -->
+        <!-- Featured Services Section -->
     <section id="featured-services" class="featured-services section">
 
       <!-- Section Title -->
@@ -540,167 +221,83 @@
 
     </section><!-- /Featured Services Section -->
 
-    <!-- Featured Agents Section -->
-    <section id="featured-agents" class="featured-agents section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Featured Agents</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
-      </div><!-- End Section Title -->
+    <!-- Home About Section -->
+    <section id="home-about" class="home-about section">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4 justify-content-center">
+        <div class="row gy-5">
 
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="featured-agent">
-              <div class="agent-wrapper">
-                <div class="agent-photo">
-                  <img src="{{ asset('img/real-estate/agent-3.webp') }}" alt="Featured Agent" class="img-fluid">
-                  <div class="overlay-info">
-                    <div class="contact-actions">
-                      <a href="tel:+14155678901" class="contact-btn phone" title="Call Now">
-                        <i class="bi bi-telephone-fill"></i>
-                      </a>
-                      <a href="mailto:jennifer.adams@example.com" class="contact-btn email" title="Send Email">
-                        <i class="bi bi-envelope-fill"></i>
-                      </a>
-                    </div>
+          <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+            <div class="image-gallery">
+              <div class="primary-image">
+                <img src="{{ asset('img/real-estate/property-exterior-1.webp') }}" alt="Modern Property" class="img-fluid">
+                <div class="experience-badge">
+                  <div class="badge-content">
+                    <div class="number"><span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>+</div>
+                    <div class="text">Years<br>Experience</div>
                   </div>
-                  <span class="achievement-badge">Star Agent</span>
                 </div>
-                <div class="agent-details">
-                  <h4>Jennifer Adams</h4>
-                  <span class="position">Premium Property Consultant</span>
-                  <div class="location-info">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <span>Beverly Hills</span>
+              </div>
+              <div class="secondary-image">
+                <img src="{{ asset('img/real-estate/property-interior-4.webp') }}" alt="Luxury Interior" class="img-fluid">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+            <div class="content">
+              <div class="section-header">
+                <span class="section-label">About Our Company</span>
+                <h2>Building Dreams, Creating Homes Since 2008</h2>
+              </div>
+
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+
+              <div class="achievements-list">
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <i class="bi bi-house-door"></i>
                   </div>
-                  <div class="expertise-tags">
-                    <span class="tag">Luxury Estates</span>
-                    <span class="tag">Celebrity Homes</span>
+                  <div class="achievement-content">
+                    <h4><span data-purecounter-start="0" data-purecounter-end="3200" data-purecounter-duration="2" class="purecounter"></span>+ Properties Sold</h4>
+                    <p>Successfully completed transactions</p>
                   </div>
-                  <a href="agent-profile.html" class="view-profile">View Profile</a>
+                </div>
+                <div class="achievement-item">
+                  <div class="achievement-icon">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <div class="achievement-content">
+                    <h4><span data-purecounter-start="0" data-purecounter-end="98" data-purecounter-duration="1" class="purecounter"></span>% Client Satisfaction</h4>
+                    <p>Happy customers recommend us</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="action-section">
+                <a href="about.html" class="btn-cta">
+                  <span>Discover Our Story</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+                <div class="contact-info">
+                  <div class="contact-icon">
+                    <i class="bi bi-telephone"></i>
+                  </div>
+                  <div class="contact-details">
+                    <span>Call us today</span>
+                    <strong>+1 (555) 123-4567</strong>
+                  </div>
                 </div>
               </div>
             </div>
-          </div><!-- End Featured Agent -->
+          </div>
 
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="featured-agent">
-              <div class="agent-wrapper">
-                <div class="agent-photo">
-                  <img src="{{ asset('img/real-estate/agent-7.webp') }}" alt="Featured Agent" class="img-fluid">
-                  <div class="overlay-info">
-                    <div class="contact-actions">
-                      <a href="tel:+14155678902" class="contact-btn phone" title="Call Now">
-                        <i class="bi bi-telephone-fill"></i>
-                      </a>
-                      <a href="mailto:marcus.hayes@example.com" class="contact-btn email" title="Send Email">
-                        <i class="bi bi-envelope-fill"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <span class="achievement-badge expert">Expert</span>
-                </div>
-                <div class="agent-details">
-                  <h4>Marcus Hayes</h4>
-                  <span class="position">Commercial Real Estate Lead</span>
-                  <div class="location-info">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <span>Manhattan</span>
-                  </div>
-                  <div class="expertise-tags">
-                    <span class="tag">Office Buildings</span>
-                    <span class="tag">Retail Spaces</span>
-                  </div>
-                  <a href="agent-profile.html" class="view-profile">View Profile</a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Featured Agent -->
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="featured-agent">
-              <div class="agent-wrapper">
-                <div class="agent-photo">
-                  <img src="{{ asset('img/real-estate/agent-5.webp') }}" alt="Featured Agent" class="img-fluid">
-                  <div class="overlay-info">
-                    <div class="contact-actions">
-                      <a href="tel:+14155678903" class="contact-btn phone" title="Call Now">
-                        <i class="bi bi-telephone-fill"></i>
-                      </a>
-                      <a href="mailto:sophia.rivera@example.com" class="contact-btn email" title="Send Email">
-                        <i class="bi bi-envelope-fill"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <span class="achievement-badge rising">Rising Star</span>
-                </div>
-                <div class="agent-details">
-                  <h4>Sophia Rivera</h4>
-                  <span class="position">First-Time Buyer Specialist</span>
-                  <div class="location-info">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <span>San Francisco</span>
-                  </div>
-                  <div class="expertise-tags">
-                    <span class="tag">Condominiums</span>
-                    <span class="tag">Young Buyers</span>
-                  </div>
-                  <a href="agent-profile.html" class="view-profile">View Profile</a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Featured Agent -->
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="featured-agent">
-              <div class="agent-wrapper">
-                <div class="agent-photo">
-                  <img src="{{ asset('img/real-estate/agent-9.webp') }}" alt="Featured Agent" class="img-fluid">
-                  <div class="overlay-info">
-                    <div class="contact-actions">
-                      <a href="tel:+14155678904" class="contact-btn phone" title="Call Now">
-                        <i class="bi bi-telephone-fill"></i>
-                      </a>
-                      <a href="mailto:daniel.morrison@example.com" class="contact-btn email" title="Send Email">
-                        <i class="bi bi-envelope-fill"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <span class="achievement-badge veteran">Veteran</span>
-                </div>
-                <div class="agent-details">
-                  <h4>Daniel Morrison</h4>
-                  <span class="position">Investment Property Advisor</span>
-                  <div class="location-info">
-                    <i class="bi bi-geo-alt-fill"></i>
-                    <span>Austin</span>
-                  </div>
-                  <div class="expertise-tags">
-                    <span class="tag">Multi-Family</span>
-                    <span class="tag">ROI Analysis</span>
-                  </div>
-                  <a href="agent-profile.html" class="view-profile">View Profile</a>
-                </div>
-              </div>
-            </div>
-          </div><!-- End Featured Agent -->
-
-        </div>
-
-        <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="500">
-          <a href="agents.html" class="discover-all-agents">
-            <span>Discover All Agents</span>
-            <i class="bi bi-arrow-right"></i>
-          </a>
         </div>
 
       </div>
 
-    </section><!-- /Featured Agents Section -->
+    </section><!-- /Home About Section -->
 
     <!-- Testimonials Section -->
     <section id="testimonials" class="testimonials section light-background">
